@@ -18,6 +18,8 @@ namespace yopaymentapi
         static void Main(string[] args)
         {
             string url = "https://paymentsapi1.yo.co.ug/ybs/task.php";
+            string api_username = "yoapiusername";
+            string api_password = "yoapipassword";
 
             Console.WriteLine("Please select the operation to do next");
             Console.WriteLine("1. Request statement");
@@ -31,7 +33,7 @@ namespace yopaymentapi
                 Console.WriteLine("Requesting for Statement from Yo! Payments server");
                 Console.WriteLine("---------------------------------------------------");
 
-                string xml_data = getMiniStatementString("api_username", "api_password");
+                string xml_data = getMiniStatementString(api_username, api_password);
                 Console.WriteLine("Sent data");
                 Console.WriteLine(xml_data);
                 Console.WriteLine("---------------------------------------------------");
